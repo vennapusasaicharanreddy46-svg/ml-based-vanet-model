@@ -1,0 +1,97 @@
+<edges>
+
+    <!-- ================= HORIZONTAL TOP ================= -->
+
+    <!-- Backbone start -->
+    <edge id="N1_N2" from="N1" to="N2"
+          numLanes="3" speed="13.9"/>
+
+    <edge id="N2_N1" from="N2" to="N1"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N2_N3" from="N2" to="N3"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N3_N2" from="N3" to="N2"
+          numLanes="2" speed="13.9"/>
+
+
+    <!-- ================= MIDDLE ROW ================= -->
+
+    <edge id="N4_N5" from="N4" to="N5"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N5_N4" from="N5" to="N4"
+          numLanes="2" speed="13.9"/>
+
+    <!-- Backbone middle -->
+    <edge id="N5_N6" from="N5" to="N6"
+          numLanes="3" speed="13.9"/>
+
+    <edge id="N6_N5" from="N6" to="N5"
+          numLanes="2" speed="13.9"/>
+
+
+    <!-- ================= BOTTOM ROW ================= -->
+
+    <edge id="N7_N8" from="N7" to="N8"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N8_N7" from="N8" to="N7"
+          numLanes="2" speed="13.9"/>
+
+    <!-- Backbone end -->
+    <edge id="N6_N9" from="N6" to="N9"
+          numLanes="3" speed="13.9"/>
+
+    <edge id="N9_N6" from="N9" to="N6"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N8_N9" from="N8" to="N9"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N9_N8" from="N9" to="N8"
+          numLanes="2" speed="13.9"/>
+
+
+    <!-- ================= VERTICAL LEFT ================= -->
+
+    <edge id="N1_N4" from="N1" to="N4"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N4_N1" from="N4" to="N1"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N4_N7" from="N4" to="N7"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N7_N4" from="N7" to="N4"
+          numLanes="2" speed="13.9"/>
+
+
+    <!-- ================= VERTICAL MIDDLE ================= -->
+
+    <!-- Backbone -->
+    <edge id="N2_N5" from="N2" to="N5"
+          numLanes="3" speed="13.9"/>
+
+    <edge id="N5_N2" from="N5" to="N2"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N5_N8" from="N5" to="N8"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N8_N5" from="N8" to="N5"
+          numLanes="2" speed="13.9"/>
+
+
+    <!-- ================= VERTICAL RIGHT ================= -->
+
+    <edge id="N3_N6" from="N3" to="N6"
+          numLanes="2" speed="13.9"/>
+
+    <edge id="N6_N3" from="N6" to="N3"
+          numLanes="2" speed="13.9"/>
+
+</edges>
+

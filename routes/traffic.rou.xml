@@ -1,0 +1,145 @@
+<routes>
+
+    <!-- ================= VEHICLE TYPES ================= -->
+
+    <vType id="normal"
+           vClass="passenger"
+           accel="2.6"
+           decel="4.5"
+           sigma="0.5"
+           maxSpeed="13.9"
+           color="0,1,1"/>
+
+    <vType id="ambulance"
+           vClass="emergency"
+           accel="4.5"
+           decel="5.0"
+           sigma="0.1"
+           maxSpeed="22"
+           guiShape="emergency"
+           color="1,1,1"/>
+
+    <vType id="firetruck"
+           vClass="emergency"
+           accel="3.8"
+           decel="4.5"
+           sigma="0.1"
+           maxSpeed="18"
+           guiShape="firebrigade"
+           color="1,0,0"/>
+
+    <vType id="police"
+           vClass="emergency"
+           accel="4.2"
+           decel="5.0"
+           sigma="0.1"
+           maxSpeed="21"
+           guiShape="police"
+           color="0,0,0"/>
+
+
+    <!-- ================= ROUTES ================= -->
+
+    <!-- Emergency -->
+    <route id="emergency_route"
+           edges="N1_N2 N2_N5 N5_N6 N6_N9"/>
+
+    <!-- Normal Base Routes -->
+    <route id="normal_route_1"
+           edges="N1_N2 N2_N3 N3_N6 N6_N9"/>
+
+    <route id="normal_route_2"
+           edges="N1_N4 N4_N5 N5_N8 N8_N9"/>
+
+    <route id="normal_route_3"
+           edges="N1_N4 N4_N7 N7_N8 N8_N9"/>
+
+    <!-- Extra Traffic Routes -->
+    <route id="extra_route_1"
+           edges="N3_N6 N6_N9"/>
+
+    <route id="extra_route_2"
+           edges="N3_N6 N6_N5 N5_N4 N4_N7"/>
+
+    <route id="extra_route_3"
+           edges="N3_N6 N6_N5 N5_N4 N4_N1"/>
+
+    <route id="extra_route_4"
+           edges="N7_N8 N8_N9"/>
+
+    <route id="extra_route_5"
+           edges="N7_N8 N8_N5 N5_N4 N4_N1"/>
+
+
+    <!-- ================= FLOWS ================= -->
+
+    <flow id="normal_1"
+          type="normal"
+          route="normal_route_1"
+          begin="0" end="1500"
+          probability="0.30"/>
+
+    <flow id="normal_2"
+          type="normal"
+          route="normal_route_2"
+          begin="0" end="1500"
+          probability="0.25"/>
+
+    <flow id="normal_3"
+          type="normal"
+          route="normal_route_3"
+          begin="0" end="1500"
+          probability="0.20"/>
+
+    <flow id="extra_flow_1"
+          type="normal"
+          route="extra_route_1"
+          begin="0" end="1500"
+          probability="0.10"/>
+
+    <flow id="extra_flow_2"
+          type="normal"
+          route="extra_route_2"
+          begin="0" end="1500"
+          probability="0.05"/>
+
+    <flow id="extra_flow_3"
+          type="normal"
+          route="extra_route_3"
+          begin="0" end="1500"
+          probability="0.05"/>
+
+    <flow id="extra_flow_4"
+          type="normal"
+          route="extra_route_4"
+          begin="0" end="1500"
+          probability="0.03"/>
+
+    <flow id="extra_flow_5"
+          type="normal"
+          route="extra_route_5"
+          begin="0" end="1500"
+          probability="0.02"/>
+
+
+    <!-- Limited Emergency Vehicles -->
+    <flow id="amb_flow"
+          type="ambulance"
+          route="emergency_route"
+          begin="100"
+          number="2"/>
+
+    <flow id="fire_flow"
+          type="firetruck"
+          route="emergency_route"
+          begin="200"
+          number="1"/>
+
+    <flow id="pol_flow"
+          type="police"
+          route="emergency_route"
+          begin="300"
+          number="2"/>
+
+</routes>
+
